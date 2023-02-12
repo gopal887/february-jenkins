@@ -4,7 +4,6 @@ pipeline{
             stage('scv'){
                 steps{
                     sh 'sudo apt update'
-
                 }
             }
             stage('build'){
