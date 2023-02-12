@@ -3,8 +3,8 @@ pipeline{
     stages{
         stage('docker'){
             steps{
-             sh 'curl -fsSL https://get.docker.com -o get-docker.sh',
-             sh 'sh get-docker.sh',
+             sh 'curl -fsSL https://get.docker.com -o get-docker.sh'
+             sh 'sh get-docker.sh'
              sh 'sudo usermod -a -G docker ubuntu'
              sh 'sudo systemctl restart docker'
              sh 'docker info'
