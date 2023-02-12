@@ -8,6 +8,7 @@ pipeline{
              sh 'sudo usermod -a -G docker ubuntu'
              sh 'sudo systemctl restart docker'
              sh 'docker info'
+             sh 'sudo chmod 666 /var/run/docker.sock'
             }
         }
     }
