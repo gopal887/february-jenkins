@@ -3,13 +3,13 @@ pipeline{
     stages{
         stage('scv'){
             steps{
-                sh 'sudo apt update'
+             git clone:'https://github.com/GitPracticeRepo/game-of-life.git'
+             cd 'GitPracticeRepo/game-of-life.git'
             }
         }
         stage('build'){
             steps{
-                git url:'https://github.com/GitPracticeRepo/game-of-life.git',
-                branch: 'master'
+            sh 'hellworld'
             }
         }
     }
