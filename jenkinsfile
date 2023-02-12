@@ -1,0 +1,18 @@
+pipeline{
+    agent ('ubuntu'){
+        stages{
+            stage('scv'){
+                steps{
+                    sh 'sudo apt update'
+
+                }
+            }
+            stage('build'){
+                steps{
+                    git url:'https://github.com/GitPracticeRepo/game-of-life.git',
+                     branch: 'master'
+                }
+            }
+        }
+    }
+}
